@@ -1,0 +1,65 @@
+{
+  "name": "calendar-backend-requests",
+  "requests": [
+    {
+      "name": "Health Check",
+      "method": "GET",
+      "url": "http://localhost:3000/health",
+      "headers": {}
+    },
+    {
+      "name": "Get All Events",
+      "method": "GET",
+      "url": "http://localhost:3000/api/events",
+      "headers": {
+        "Authorization": "Bearer YOUR_FIREBASE_ID_TOKEN"
+      }
+    },
+    {
+      "name": "Create Event",
+      "method": "POST",
+      "url": "http://localhost:3000/api/events",
+      "headers": {
+        "Authorization": "Bearer YOUR_FIREBASE_ID_TOKEN",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "title": "Team Meeting",
+        "description": "Weekly team sync meeting",
+        "date": "2025-06-15T10:00:00.000Z",
+        "category": "work"
+      }
+    },
+    {
+      "name": "Get Event by ID",
+      "method": "GET",
+      "url": "http://localhost:3000/api/events/EVENT_ID",
+      "headers": {
+        "Authorization": "Bearer YOUR_FIREBASE_ID_TOKEN"
+      }
+    },
+    {
+      "name": "Update Event",
+      "method": "PUT",
+      "url": "http://localhost:3000/api/events/EVENT_ID",
+      "headers": {
+        "Authorization": "Bearer YOUR_FIREBASE_ID_TOKEN",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "title": "Updated Team Meeting",
+        "description": "Updated weekly team sync meeting",
+        "date": "2025-06-15T11:00:00.000Z",
+        "category": "work"
+      }
+    },
+    {
+      "name": "Delete Event",
+      "method": "DELETE",
+      "url": "http://localhost:3000/api/events/EVENT_ID",
+      "headers": {
+        "Authorization": "Bearer YOUR_FIREBASE_ID_TOKEN"
+      }
+    }
+  ]
+}
