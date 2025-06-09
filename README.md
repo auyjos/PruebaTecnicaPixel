@@ -76,14 +76,37 @@ The frontend will be built with Next.js + TypeScript and will include:
 - Firestore
 - Vite
 - Express Validator
-- CORS & Helmet
+- CORS
 
-### Frontend (Planned)
+### Frontend 
 - Next.js
 - TypeScript
 - Material-UI
 - Firebase Auth
 - React Context API
+## Screenshots
+
+**Home (when signed in)**  
+![Home Page](frontend/public/home.png)
+
+**Login Page**  
+![Login Page](frontend/public/login.png)
+
+**Events Page**  
+![Events Page](frontend/public/events.png)
+
+**Create Event Page**  
+![Create Event Page](frontend/public/create.png)
+
+**Edit Event Page**  
+![Edit Event Page](frontend/public/edit.png)
+
+**Delete Event Page**  
+![Delete Event Page](frontend/public/delete.png)
+
+**Firestore- Events by UserID **  
+![Delete Event Page](frontend/public/firestore.png)
+
 
 ## Contributing
 

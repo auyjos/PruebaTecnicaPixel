@@ -19,9 +19,6 @@ env
 .env.*
 !.env.example
 .env.local
-project.json
-firebase-service-account*.json
-firebase-adminsdk*.json
 .env.development.local
 .env.test.local
 .env.production.local
