@@ -13,7 +13,6 @@ import {
   Alert,
   Paper,
   Typography,
-  Grid
 } from '@mui/material';
 
 interface EventFormProps {
@@ -92,8 +91,15 @@ const EventForm: React.FC<EventFormProps> = ({ eventToEdit }) => {
             {error || formError}
           </Alert>
         )}
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
+        {/* Use CSS Grid for responsive layout */}
+        <Box
+          sx={{
+            display: 'grid',
+            gap: 2,
+            gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }
+          }}
+        >
+          <Box sx={{ gridColumn: 'span 2' }}>
             <TextField
               name="title"
               required
@@ -104,8 +110,8 @@ const EventForm: React.FC<EventFormProps> = ({ eventToEdit }) => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Box>
+          <Box sx={{ gridColumn: 'span 2' }}>
             <TextField
               name="description"
               fullWidth
@@ -116,8 +122,8 @@ const EventForm: React.FC<EventFormProps> = ({ eventToEdit }) => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          </Box>
+          <Box>
             <TextField
               name="date"
               required
@@ -125,14 +131,12 @@ const EventForm: React.FC<EventFormProps> = ({ eventToEdit }) => {
               id="date"
               label="Date"
               type="date"
-              InputLabelProps={{
-                shrink: true,
-              }}
-              value={date} // This should be in 'yyyy-MM-dd' format
+              InputLabelProps={{ shrink: true }}
+              value={date}
               onChange={(e) => setDate(e.target.value)}
             />
-          </Grid>
-          <Grid item xs={12} sm={6}>
+          </Box>
+          <Box>
             <TextField
               name="location"
               required
@@ -142,8 +146,8 @@ const EventForm: React.FC<EventFormProps> = ({ eventToEdit }) => {
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
-          </Grid>
-          <Grid item xs={12}> {/* Added Category field */}
+          </Box>
+          <Box sx={{ gridColumn: 'span 2' }}>
             <TextField
               name="category"
               required
@@ -153,8 +157,8 @@ const EventForm: React.FC<EventFormProps> = ({ eventToEdit }) => {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             />
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
         <Button
           type="submit"
           fullWidth

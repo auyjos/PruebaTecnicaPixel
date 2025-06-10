@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -9,7 +8,6 @@ import {
   Box,
   CircularProgress,
   Typography,
-  Grid,
   TextField,
   Button,
   Pagination,
@@ -123,13 +121,19 @@ const EventList: React.FC = () => {
       )}
 
       {events.length > 0 && (
-        <Grid container spacing={3}>
+        <Box
+          sx={{
+            display: 'grid',
+            gap: 3,
+            gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }
+          }}
+        >
           {events.map((event: Event) => (
-            <Grid item xs={12} sm={6} md={4} key={event.id}>
+            <Box key={event.id}>
               <EventItem event={event} onDelete={deleteEvent} />
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       )}
 
       {totalPages > 1 && (

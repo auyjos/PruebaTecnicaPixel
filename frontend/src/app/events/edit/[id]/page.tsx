@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import EventForm from '@/components/EventForm';
+import EventForm from '@/components/EventForm'
 import { Container, Typography, Box, CircularProgress } from '@mui/material';
 import { useAuth } from '@/context/AuthContext';
 import { useEvents } from '@/context/EventContext';

@@ -109,9 +109,9 @@ export const EventProvider = ({ children }: { children: ReactNode }) => {
     } finally {
       setLoading(false);
     }
-  }, [currentUser]); // Depends on currentUser object because it uses currentUser.getIdToken()
+  }, [currentUser]);
 
-  // Add a ref to ensure we only fetch once per user session in StrictMode
+ 
   const didFetchEventsRef = useRef(false);
 
   // Effect to fetch all events
