@@ -57,9 +57,9 @@ The backend is a REST API built with:
 
 The backend will be available at `http://localhost:3000`
 
-## Frontend (Coming Soon)
+## Frontend
 
-The frontend will be built with Next.js + TypeScript and will include:
+The frontend is built with Next.js + TypeScript and will include:
 - Modern React components with Material-UI
 - Firebase Authentication integration
 - Calendar event management interface
